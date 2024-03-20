@@ -1,11 +1,11 @@
 name: Create eks
 
 on:
-  push:
+  pull_request:
+    types:
+      - closed
     branches:
       - main
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   terraform:
